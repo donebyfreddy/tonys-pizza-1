@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, MapPin, Phone } from "lucide-react";
+import { useI18n } from "@/i18n";
 
 export function Footer() {
   return (
