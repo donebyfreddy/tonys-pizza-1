@@ -85,7 +85,7 @@ export default function Index() {
               {t("hero.viewMenu")}
             </Link>
             <Link
-              to="/contact"
+              to="/#visit"
               className="inline-flex items-center rounded-full border border-foreground/20 bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-background"
             >
               {t("hero.bookTable")}
