@@ -20,7 +20,7 @@ export function Header() {
             <span className="font-bold">RF</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-xl tracking-tight">Rosso Forno</div>
+            <div className="font-display text-xl tracking-tight">Tony's Pizza</div>
             <div className="text-xs text-muted-foreground -mt-0.5">Wood-fired Pizza</div>
           </div>
         </Link>
