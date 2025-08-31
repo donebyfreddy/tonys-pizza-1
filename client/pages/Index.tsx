@@ -33,18 +33,19 @@ export default function Index() {
       <section className="relative">
         <div className="absolute inset-0 -z-10">
           <video
-            className="h-[85svh] w-full object-cover pointer-events-none"
+            className="h-[90svh] w-full object-cover pointer-events-none"
             autoPlay
             muted
             loop
             playsInline
-            poster="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=1900&auto=format&fit=crop"
+            poster="https://cdn.freepixel.com/preview/free-photos-delicious-veggie-supreme-pizza-with-pepperoni-on-wooden-table-top-for-italian-food-ready-to-eat-conc-preview-1009756.jpg"
           >
-            <source src="https://videos.pexels.com/video-files/5898640/5898640-sd_960_506_30fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3196001/3196001-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3196001/3196001-hd_1920_1080_25fps.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-background/20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
-          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background" />
+          <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-background/70 to-transparent" />
         </div>
         <div className="container flex min-h-[85svh] flex-col justify-end pb-12">
           <motion.h1
