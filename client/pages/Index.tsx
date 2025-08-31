@@ -154,12 +154,14 @@ export default function Index() {
               <h3 className="font-display text-3xl font-bold md:text-4xl">{t("cta.title")}</h3>
               <p className="mt-2 text-sm opacity-90 md:text-base">{t("cta.desc")}</p>
               <div className="mt-6">
-                <Link
-                  to="/menu"
+                <a
+                  href="https://glovoapp.com/es/es/barcelona/tonys-from-new-york-barcelona/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center rounded-full bg-background/15 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur transition hover:bg-background/20"
                 >
                   {t("cta.start")}
-                </Link>
+                </a>
               </div>
             </div>
             <img
