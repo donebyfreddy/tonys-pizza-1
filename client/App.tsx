@@ -12,7 +12,7 @@ import Layout from "./components/site/Layout";
 import Menu from "./pages/Menu";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { I18nProvider } from "./i18n";
+import { I18nProvider } from "@/i18n";
 
 const queryClient = new QueryClient();
 
