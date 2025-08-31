@@ -39,4 +39,11 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+const container = document.getElementById("root")!;
+// Persist root across HMR to avoid double createRoot and DOM errors
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const w = window as any;
+if (!w.__APP_ROOT__) {
+  w.__APP_ROOT__ = createRoot(container);
+}
+(w.__APP_ROOT__ as ReturnType<typeof createRoot>).render(<App />);
