@@ -196,14 +196,14 @@ export default function Index() {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
-                  <div className="font-semibold">21 Via Napoli, San Francisco, CA</div>
+                  <div className="font-semibold">Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona</div>
                   <div className="text-sm text-muted-foreground">{t("visit.addressNote")}</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
-                  <div className="font-semibold">(415) 555‑0123</div>
+                  <div className="font-semibold">930 37 05 90</div>
                   <div className="text-sm text-muted-foreground">{t("visit.phoneNote")}</div>
                 </div>
               </div>
