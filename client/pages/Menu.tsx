@@ -10,7 +10,7 @@ type MenuItem = {
 
 const categories: { title: string; items: MenuItem[] }[] = [
   {
-    title: "Classics",
+    title: "pages.menu.categories.classics",
     items: [
       {
         name: "Margherita D.O.P.",
@@ -36,7 +36,7 @@ const categories: { title: string; items: MenuItem[] }[] = [
     ],
   },
   {
-    title: "Signatures",
+    title: "pages.menu.categories.signatures",
     items: [
       {
         name: "Diavola",
@@ -62,7 +62,7 @@ const categories: { title: string; items: MenuItem[] }[] = [
     ],
   },
   {
-    title: "Sides & Salads",
+    title: "pages.menu.categories.sides",
     items: [
       {
         name: "Wood‑Roasted Olives",
@@ -88,7 +88,7 @@ const categories: { title: string; items: MenuItem[] }[] = [
     ],
   },
   {
-    title: "Drinks",
+    title: "pages.menu.categories.drinks",
     items: [
       {
         name: "Italian Soda",
@@ -141,7 +141,7 @@ export default function Menu() {
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="font-display text-2xl font-semibold"
               >
-                {cat.title}
+                {t(cat.title)}
               </motion.h2>
               <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {cat.items.map((item, j) => (
