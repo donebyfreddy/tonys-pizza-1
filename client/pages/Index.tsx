@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Clock, MapPin, Phone } from "lucide-react";
+import { useI18n } from "@/i18n";
 
 const featured = [
   {
