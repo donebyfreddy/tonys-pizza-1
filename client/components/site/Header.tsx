@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
-const navItems = [
-  { to: "/", label: "Home" },
-  { to: "/menu", label: "Menu" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+import { useI18n } from "@/i18n";
+
+const navItemsBase = [
+  { to: "/", key: "nav.home" },
+  { to: "/menu", key: "nav.menu" },
+  { to: "/about", key: "nav.about" },
+  { to: "/contact", key: "nav.contact" },
 ];
 
 export function Header() {
@@ -76,15 +78,24 @@ export function Header() {
                 }
                 onClick={() => setOpen(false)}
               >
-                {item.label}
+                {t(item.key)}
               </NavLink>
             ))}
+            <button
+              onClick={() => {
+                toggle();
+                setOpen(false);
+              }}
+              className="mt-2 inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold text-foreground/80"
+            >
+              {locale === "es" ? t("lang.es") : t("lang.en")}
+            </button>
             <Link
               to="/menu"
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm"
               onClick={() => setOpen(false)}
             >
-              Order now
+              {t("nav.order")}
             </Link>
           </div>
         </div>
