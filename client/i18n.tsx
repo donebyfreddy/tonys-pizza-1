@@ -8,7 +8,7 @@ const dict: Record<Locale, Dict> = {
   es: {
     brand: {
       name: "Tony's Pizza",
-      tagline: "Pizza al horno de leña",
+      tagline: "Pizzas muy buenas",
     },
     nav: { home: "Inicio", menu: "Menú", about: "Nosotros", contact: "Contacto", order: "Pedir ahora" },
     hero: {
