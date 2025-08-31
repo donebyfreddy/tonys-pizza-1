@@ -16,14 +16,14 @@ const featured = [
     desc: "Spicy calabrese salami, smoked provolone, oregano, hot honey.",
     price: "$19",
     image:
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1400&auto=format&fit=crop",
+      "https://images.pexels.com/photos/166451/pexels-photo-166451.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
   },
   {
-    name: "Funghi Truffle",
-    desc: "Roasted mushrooms, taleggio, thyme, white truffle oil.",
+    name: "Burrata and Pesto",
+    desc: "Creamy burrata, basil pesto, cherry tomatoes.",
     price: "$21",
     image:
-      "https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
+      "https://images.pexels.com/photos/1527602/pexels-photo-1527602.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
   },
 ];
 
