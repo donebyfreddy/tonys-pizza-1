@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Clock, MapPin, Phone } from "lucide-react";
 
 const featured = [
   {
@@ -161,6 +162,54 @@ export default function Index() {
               src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
               alt="Pepperoni pizza"
               className="hidden h-52 w-full rounded-2xl object-cover shadow-md md:block"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Visit & hours */}
+      <section className="container py-16">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="space-y-6">
+            <h3 className="font-display text-3xl font-bold md:text-4xl">Visit us</h3>
+            <p className="max-w-prose text-muted-foreground">
+              Join us for lunch or dinner. We keep a portion of our dining room for walk‑ins every day.
+            </p>
+            <div className="grid gap-4 rounded-2xl border bg-card p-6">
+              <div className="flex items-start gap-3">
+                <Clock className="mt-0.5 h-5 w-5 text-primary" />
+                <div>
+                  <div className="font-semibold">Opening hours</div>
+                  <ul className="mt-1 text-sm text-muted-foreground">
+                    <li>Mon–Thu: 11:30a – 10:00p</li>
+                    <li>Fri–Sat: 11:30a – 11:30p</li>
+                    <li>Sun: 11:30a – 9:30p</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-5 w-5 text-primary" />
+                <div>
+                  <div className="font-semibold">21 Via Napoli, San Francisco, CA</div>
+                  <div className="text-sm text-muted-foreground">Street parking available • Walk‑ins welcome</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-5 w-5 text-primary" />
+                <div>
+                  <div className="font-semibold">(415) 555‑0123</div>
+                  <div className="text-sm text-muted-foreground">Call for large parties and catering</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-2xl border shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.398916328497!2d2.1082320747981536!3d41.40885839466508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499ad15ac0e75%3A0x8250c5940237ade!2sTony%27s%20From%20New%20York!5e0!3m2!1sen!2ses!4v1756635063547!5m2!1sen!2ses"
+              className="h-[360px] w-full md:h-[460px] lg:h-[520px]"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
