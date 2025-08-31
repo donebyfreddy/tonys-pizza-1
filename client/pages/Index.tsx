@@ -1,62 +1,164 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const featured = [
+  {
+    name: "Margherita D.O.P.",
+    desc: "San Marzano, fior di latte, fresh basil, extra virgin olive oil.",
+    price: "$16",
+    image:
+      "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    name: "Diavola",
+    desc: "Spicy calabrese salami, smoked provolone, oregano, hot honey.",
+    price: "$19",
+    image:
+      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1400&auto=format&fit=crop",
+  },
+  {
+    name: "Funghi Truffle",
+    desc: "Roasted mushrooms, taleggio, thyme, white truffle oil.",
+    price: "$21",
+    image:
+      "https://images.unsplash.com/photo-1600628421055-4d35cf04f615?q=80&w=1400&auto=format&fit=crop",
+  },
+];
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
+    <div className="">
+      {/* Hero */}
+      <section className="relative">
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1900&auto=format&fit=crop"
+            alt="Wood-fired oven with pizza"
+            className="h-[70svh] w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        </div>
+        <div className="container flex min-h-[70svh] flex-col justify-end pb-12">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-4xl font-extrabold tracking-tight text-foreground drop-shadow md:text-6xl"
           >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
+            Wood‑Fired Pizza, Made in Napoli Tradition
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-4 max-w-2xl text-base text-foreground/80 md:text-lg"
+          >
+            Dough fermented 72 hours. San Marzano tomatoes. Fior di latte. Baked in a 900°F oven for a blistered, airy crust.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8 flex flex-wrap gap-3"
+          >
+            <Link
+              to="/menu"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              View menu
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center rounded-full border border-foreground/20 bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-background"
+            >
+              Book a table
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Pizzas */}
+      <section className="container py-16">
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <h2 className="font-display text-3xl font-bold md:text-4xl">Featured Pizzas</h2>
+            <p className="mt-2 text-muted-foreground">Seasonal highlights from our wood-fired oven.</p>
+          </div>
+          <Link
+            to="/menu"
+            className="hidden rounded-full border px-4 py-2 text-sm font-medium text-foreground/80 hover:bg-secondary md:inline-flex"
+          >
+            Explore full menu
+          </Link>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((item, i) => (
+            <motion.article
+              key={item.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className="group overflow-hidden rounded-2xl border bg-card shadow-sm"
+            >
+              <div className="relative">
+                <img src={item.image} alt={item.name} className="h-56 w-full object-cover transition duration-300 group-hover:scale-105" />
+                <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold tracking-wide text-foreground/90 shadow">Chef's pick</span>
+              </div>
+              <div className="p-5">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-semibold">{item.name}</h3>
+                  <span className="font-semibold text-primary">{item.price}</span>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience strip */}
+      <section className="bg-secondary/60 py-12">
+        <div className="container grid items-center gap-8 md:grid-cols-3">
+          <div>
+            <h3 className="font-display text-2xl font-semibold">72‑Hour Dough</h3>
+            <p className="mt-2 text-sm text-muted-foreground">Cold-fermented for depth of flavor and an airy cornicione.</p>
+          </div>
+          <div>
+            <h3 className="font-display text-2xl font-semibold">San Marzano DOP</h3>
+            <p className="mt-2 text-sm text-muted-foreground">Our sauce uses tomatoes grown in volcanic soil near Vesuvius.</p>
+          </div>
+          <div>
+            <h3 className="font-display text-2xl font-semibold">900°F Wood Fire</h3>
+            <p className="mt-2 text-sm text-muted-foreground">A blistered crust with leopard spots in 90 seconds flat.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container py-16">
+        <div className="overflow-hidden rounded-3xl border bg-gradient-to-tr from-primary to-accent p-8 text-primary-foreground shadow-lg md:p-12">
+          <div className="grid items-center gap-6 md:grid-cols-2">
+            <div>
+              <h3 className="font-display text-3xl font-bold md:text-4xl">Order for pickup tonight</h3>
+              <p className="mt-2 text-sm opacity-90 md:text-base">Skip the line. Your pie will be fired the moment you arrive.</p>
+              <div className="mt-6">
+                <Link
+                  to="/menu"
+                  className="inline-flex items-center rounded-full bg-background/15 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur transition hover:bg-background/20"
+                >
+                  Start order
+                </Link>
+              </div>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
+              alt="Pepperoni pizza"
+              className="hidden h-52 w-full rounded-2xl object-cover shadow-md md:block"
             />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
-            />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
