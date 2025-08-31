@@ -95,7 +95,7 @@ const categories: { title: string; items: MenuItem[] }[] = [
         desc: "Blood orange, lemon, chinotto.",
         price: "$6",
         image:
-          "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1200&auto=format&fit=crop",
+          "https://images.pexels.com/photos/28559550/pexels-photo-28559550.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
       },
       {
         name: "House Red/White Wine",
