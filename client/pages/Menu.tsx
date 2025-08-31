@@ -43,7 +43,7 @@ const categories: { title: string; items: MenuItem[] }[] = [
         desc: "Calabrese salami, smoked provolone, hot honey.",
         price: "$19",
         image:
-          "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop",
+          "https://images.pexels.com/photos/166451/pexels-photo-166451.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
       },
       {
         name: "Funghi Truffle",
@@ -92,13 +92,13 @@ const categories: { title: string; items: MenuItem[] }[] = [
     items: [
       {
         name: "Italian Soda",
-        desc: "Blood orange, chinotto, lemon.",
+        desc: "Blood orange, lemon, chinotto.",
         price: "$6",
         image:
           "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1200&auto=format&fit=crop",
       },
       {
-        name: "House Red/White",
+        name: "House Red/White Wine",
         desc: "By the glass.",
         price: "$10",
         image:
