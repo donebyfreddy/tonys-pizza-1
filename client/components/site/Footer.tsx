@@ -18,10 +18,10 @@ export function Footer() {
             {t("brand.tagline")}
           </p>
           <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
-            <MapPin className="h-4 w-4" /> 21 Via Napoli, San Francisco, CA
+            <MapPin className="h-4 w-4" /> Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona
           </div>
           <div className="mt-2 flex items-center gap-4 text-sm text-muted-foreground">
-            <Phone className="h-4 w-4" /> (415) 555-0123
+            <Phone className="h-4 w-4" /> 930 37 05 90
           </div>
         </div>
         <div>
