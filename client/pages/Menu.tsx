@@ -80,12 +80,13 @@ const categories: { title: string; items: MenuItem[] }[] = [
 ];
 
 export default function Menu() {
+  const { t } = useI18n();
   return (
     <div className="">
       <section className="border-b bg-secondary/60 py-14">
         <div className="container">
-          <h1 className="font-display text-4xl font-extrabold tracking-tight md:text-5xl">Our Menu</h1>
-          <p className="mt-2 max-w-2xl text-muted-foreground">Crafted with imported ingredients and baked to perfection in our wood‑fired oven.</p>
+          <h1 className="font-display text-4xl font-extrabold tracking-tight md:text-5xl">{t("pages.menu.title")}</h1>
+          <p className="mt-2 max-w-2xl text-muted-foreground">{t("pages.menu.subtitle")}</p>
         </div>
       </section>
 
