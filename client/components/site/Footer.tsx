@@ -47,7 +47,7 @@ export function Footer() {
             rel="noreferrer"
             className="mt-4 inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground"
           >
-            <Instagram className="h-4 w-4" /> Instagram
+            <Instagram className="h-4 w-4" /> {t("footer.instagram")}
           </a>
         </div>
       </div>
