@@ -52,12 +52,14 @@ export function Header() {
           >
             {locale === "es" ? t("lang.es") : t("lang.en")}
           </button>
-          <Link
-            to="/menu"
+          <a
+            href="https://glovoapp.com/es/es/barcelona/tonys-from-new-york-barcelona/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             {t("nav.order")}
-          </Link>
+          </a>
         </nav>
 
         <button
@@ -100,13 +102,15 @@ export function Header() {
             >
               {locale === "es" ? t("lang.es") : t("lang.en")}
             </button>
-            <Link
-              to="/menu"
+            <a
+              href="https://glovoapp.com/es/es/barcelona/tonys-from-new-york-barcelona/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm"
               onClick={() => setOpen(false)}
             >
               {t("nav.order")}
-            </Link>
+            </a>
           </div>
         </div>
       </div>
