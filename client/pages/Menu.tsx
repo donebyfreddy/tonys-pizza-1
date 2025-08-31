@@ -64,17 +64,47 @@ const categories: { title: string; items: MenuItem[] }[] = [
   {
     title: "Sides & Salads",
     items: [
-      { name: "Wood‑Roasted Olives", desc: "Citrus, rosemary, chili.", price: "$8" },
-      { name: "Caesar", desc: "Little gem, parm, sourdough croutons.", price: "$12" },
-      { name: "Burrata", desc: "Tomatoes, basil, Sicilian olive oil.", price: "$14" },
+      {
+        name: "Wood‑Roasted Olives",
+        desc: "Citrus, rosemary, chili.",
+        price: "$8",
+        image: "https://images.unsplash.com/photo-1510627498534-cf7e9002facc?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        name: "Caesar",
+        desc: "Little gem, parm, sourdough croutons.",
+        price: "$12",
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        name: "Burrata",
+        desc: "Tomatoes, basil, Sicilian olive oil.",
+        price: "$14",
+        image: "https://images.unsplash.com/photo-1625944230940-42100437b04b?q=80&w=1200&auto=format&fit=crop",
+      },
     ],
   },
   {
     title: "Drinks",
     items: [
-      { name: "Italian Soda", desc: "Blood orange, chinotto, lemon.", price: "$6" },
-      { name: "House Red/White", desc: "By the glass.", price: "$10" },
-      { name: "Birra Moretti", desc: "Lager, 12oz.", price: "$7" },
+      {
+        name: "Italian Soda",
+        desc: "Blood orange, chinotto, lemon.",
+        price: "$6",
+        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        name: "House Red/White",
+        desc: "By the glass.",
+        price: "$10",
+        image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c76af?q=80&w=1200&auto=format&fit=crop",
+      },
+      {
+        name: "Birra Moretti",
+        desc: "Lager, 12oz.",
+        price: "$7",
+        image: "https://images.unsplash.com/photo-1541558869434-2840d74ebf9f?q=80&w=1200&auto=format&fit=crop",
+      },
     ],
   },
 ];
