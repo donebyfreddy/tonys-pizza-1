@@ -33,19 +33,20 @@ export default function Index() {
       <section className="relative">
         <div className="absolute inset-0 -z-10">
           <video
-            className="h-[70svh] w-full object-cover pointer-events-none"
+            className="h-[85svh] w-full object-cover pointer-events-none"
             autoPlay
             muted
             loop
             playsInline
-            poster="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1900&auto=format&fit=crop"
+            poster="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=1900&auto=format&fit=crop"
           >
-            <source src="https://videos.pexels.com/video-files/4457933/4457933-hd_1920_1080_24fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/5898640/5898640-sd_960_506_30fps.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-background/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background" />
+          <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background/60 to-transparent" />
         </div>
-        <div className="container flex min-h-[70svh] flex-col justify-end pb-12">
+        <div className="container flex min-h-[85svh] flex-col justify-end pb-12">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
