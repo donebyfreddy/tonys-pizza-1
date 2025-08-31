@@ -23,7 +23,7 @@ const featured = [
     desc: "Roasted mushrooms, taleggio, thyme, white truffle oil.",
     price: "$21",
     image:
-      "https://images.unsplash.com/photo-1600628421055-4d35cf04f615?q=80&w=1400&auto=format&fit=crop",
+      "https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=1400&h=900&fit=crop",
   },
 ];
 
