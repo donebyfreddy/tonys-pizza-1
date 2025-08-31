@@ -13,6 +13,8 @@ const navItemsBase = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t, toggle, locale } = useI18n();
+  const navItems = navItemsBase;
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
@@ -22,12 +24,12 @@ export function Header() {
             <span className="font-bold">RF</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-xl tracking-tight">Tony's Pizza</div>
-            <div className="text-xs text-muted-foreground -mt-0.5">Wood-fired Pizza</div>
+            <div className="font-display text-xl tracking-tight">{t("brand.name")}</div>
+            <div className="text-xs text-muted-foreground -mt-0.5">{t("brand.tagline")}</div>
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-8">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -39,14 +41,22 @@ export function Header() {
               }
               onClick={() => setOpen(false)}
             >
-              {item.label}
+              {t(item.key)}
             </NavLink>
           ))}
+          <button
+            aria-label="Toggle language"
+            onClick={toggle}
+            className="inline-flex h-9 items-center justify-center rounded-full border px-3 text-xs font-semibold text-foreground/80 hover:bg-secondary"
+            title={locale === "es" ? "Cambiar a EN" : "Switch to ES"}
+          >
+            {locale === "es" ? t("lang.es") : t("lang.en")}
+          </button>
           <Link
             to="/menu"
             className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            Order now
+            {t("nav.order")}
           </Link>
         </nav>
 
