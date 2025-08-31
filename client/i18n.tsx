@@ -39,7 +39,7 @@ const dict: Record<Locale, Dict> = {
     pages: {
       menu: { title: "Nuestro Menú", subtitle: "Hecho con ingredientes importados y horneado a la perfección en nuestro horno de leña." },
       about: { title: "Sobre Tony's Pizza", body: "Somos una pizzería moderna inspirada en Nápoles. Nuestra masa fermenta durante 72 horas y cada pizza se hornea en un horno de leña a 900°F. Si quieres, puedo completar esta página con nuestra historia completa, equipo y fotos." },
-      contact: { title: "Contacto", body: "Llámanos al (415) 555‑0123 o visítanos en 21 Via Napoli, San Francisco. ¿Quieres un formulario con mapa y reservas? Puedo añadirlo después." },
+      contact: { title: "Contacto", body: "Llámanos al 930 37 05 90 o visítanos en Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. ¿Quieres un formulario con mapa y reservas? Puedo añadirlo después." },
     },
     lang: { es: "ES", en: "EN" },
   },
@@ -74,7 +74,7 @@ const dict: Record<Locale, Dict> = {
     pages: {
       menu: { title: "Our Menu", subtitle: "Crafted with imported ingredients and baked to perfection in our wood‑fired oven." },
       about: { title: "About Rosso Forno", body: "We are a modern pizzeria inspired by Naples. Our dough ferments for 72 hours and every pie bakes in a 900°F wood‑fired oven. If you'd like, I can fill this page with our full story, team, and photos." },
-      contact: { title: "Contact", body: "Reach us at (415) 555‑0123 or visit 21 Via Napoli, San Francisco. Want a contact form with maps and booking? I can add that next." },
+      contact: { title: "Contact", body: "Reach us at +34 930 37 05 90 or visit Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. Want a contact form with maps and booking? I can add that next." },
     },
     lang: { es: "ES", en: "EN" },
   },
