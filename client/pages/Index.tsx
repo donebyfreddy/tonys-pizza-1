@@ -33,7 +33,7 @@ export default function Index() {
       <section className="relative">
         <div className="absolute inset-0 -z-10">
           <video
-            className="h-[90svh] w-full object-cover pointer-events-none"
+            className="h-[75svh] w-full object-cover pointer-events-none"
             autoPlay
             muted
             loop
@@ -47,7 +47,7 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background/90" />
           <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-background/60 to-transparent" />
         </div>
-        <div className="container flex min-h-[85svh] flex-col justify-end pb-12">
+        <div className="container flex min-h-[75svh] flex-col justify-end pb-12">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
