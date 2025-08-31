@@ -10,7 +10,7 @@ export function Footer() {
             <div className="h-9 w-9 rounded-full bg-primary/90 text-primary-foreground grid place-items-center shadow-sm">
               <span className="font-bold">RF</span>
             </div>
-            <span className="font-display text-xl">Rosso Forno</span>
+            <span className="font-display text-xl">Tony's Pizza</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground max-w-sm">
             Neapolitan-style pizzas baked in a 900°F wood-fired oven. Simple ingredients. Big flavor.
@@ -49,7 +49,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Rosso Forno. All rights reserved.
+        © {new Date().getFullYear()} Tony's Pizza. All rights reserved.
       </div>
     </footer>
   );
