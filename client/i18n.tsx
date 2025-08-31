@@ -15,7 +15,7 @@ const dict: Record<Locale, Dict> = {
   es: {
     brand: {
       name: "Tony's Pizza New York",
-      tagline: "Pizza al horno de leña",
+      tagline: "Sabor auténtico, pizza de calidad.",
     },
     nav: {
       home: "Inicio",
@@ -35,6 +35,7 @@ const dict: Record<Locale, Dict> = {
       title: "Pizzas destacadas",
       subtitle: "Selecciones de temporada de nuestro horno de leña.",
       chefsPick: "Recomendación del chef",
+      explore: "Ver menú completo",
     },
     features: {
       dough: {
@@ -66,12 +67,18 @@ const dict: Record<Locale, Dict> = {
       addressNote: "Aparcamiento en la calle • Sin necesidad de reserva",
       phoneNote: "Llámanos para grupos grandes y catering",
     },
-    footer: { navigate: "Navegación", hours: "Horario" },
+    footer: { navigate: "Navegación", hours: "Horario", instagram: "Instagram" },
     pages: {
       menu: {
         title: "Nuestro Menú",
         subtitle:
           "Hecho con ingredientes importados y horneado a la perfección en nuestro horno de leña.",
+        categories: {
+          classics: "Clásicas",
+          signatures: "Especiales",
+          sides: "Entrantes y ensaladas",
+          drinks: "Bebidas",
+        },
       },
       about: {
         title: "Sobre Tony's Pizza",
@@ -79,13 +86,13 @@ const dict: Record<Locale, Dict> = {
       },
       contact: {
         title: "Contacto",
-        body: "Llámanos al 930 37 05 90 o visítanos en Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. ¿Quieres un formulario con mapa y reservas? Puedo añadirlo después.",
+        body: "Llámanos al 930 37 05 90 o visítanos en Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. ¿Quieres un formulario con mapa y reservas? Puedo a��adirlo después.",
       },
     },
     lang: { es: "ES", en: "EN" },
   },
   en: {
-    brand: { name: "Tony's Pizza", tagline: "Wood-fired Pizza" },
+    brand: { name: "Tony's Pizza New York", tagline: "Authentic flavor, quality pizza." },
     nav: {
       home: "Home",
       menu: "Menu",
@@ -104,6 +111,7 @@ const dict: Record<Locale, Dict> = {
       title: "Featured Pizzas",
       subtitle: "Seasonal highlights from our wood-fired oven.",
       chefsPick: "Chef's pick",
+      explore: "Explore full menu",
     },
     features: {
       dough: {
@@ -135,20 +143,26 @@ const dict: Record<Locale, Dict> = {
       addressNote: "Street parking available • Walk‑ins welcome",
       phoneNote: "Call for large parties and catering",
     },
-    footer: { navigate: "Navigate", hours: "Hours" },
+    footer: { navigate: "Navigate", hours: "Hours", instagram: "Instagram" },
     pages: {
       menu: {
         title: "Our Menu",
         subtitle:
           "Crafted with imported ingredients and baked to perfection in our wood‑fired oven.",
+        categories: {
+          classics: "Classics",
+          signatures: "Signatures",
+          sides: "Sides & Salads",
+          drinks: "Drinks",
+        },
       },
       about: {
-        title: "About Rosso Forno",
+        title: "About Tony's Pizza from New York",
         body: "We are a modern pizzeria inspired by Naples. Our dough ferments for 72 hours and every pie bakes in a 900°F wood‑fired oven. If you'd like, I can fill this page with our full story, team, and photos.",
       },
       contact: {
         title: "Contact",
-        body: "Reach us at +34 930 37 05 90 or visit Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. Want a contact form with maps and booking? I can add that next.",
+        body: "Reach us at 930 37 05 90 or visit Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona. Want a contact form with maps and booking? I can add that next.",
       },
     },
     lang: { es: "ES", en: "EN" },
