@@ -28,6 +28,7 @@ const featured = [
 ];
 
 export default function Index() {
+  const { t } = useI18n();
   return (
     <div className="">
       {/* Hero */}
@@ -55,7 +56,7 @@ export default function Index() {
             transition={{ duration: 0.6 }}
             className="font-display text-4xl font-extrabold tracking-tight text-foreground drop-shadow md:text-6xl"
           >
-            Wood‑Fired Pizza, Made in Napoli Tradition
+            {t("hero.title")}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +64,7 @@ export default function Index() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 max-w-2xl text-base text-foreground/80 md:text-lg"
           >
-            Dough fermented 72 hours. San Marzano tomatoes. Fior di latte. Baked in a 900°F oven for a blistered, airy crust.
+            {t("hero.subtitle")}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,13 +76,13 @@ export default function Index() {
               to="/menu"
               className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              View menu
+              {t("hero.viewMenu")}
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center rounded-full border border-foreground/20 bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-background"
             >
-              Book a table
+              {t("hero.bookTable")}
             </Link>
           </motion.div>
         </div>
@@ -91,8 +92,8 @@ export default function Index() {
       <section className="container py-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <h2 className="font-display text-3xl font-bold md:text-4xl">Featured Pizzas</h2>
-            <p className="mt-2 text-muted-foreground">Seasonal highlights from our wood-fired oven.</p>
+            <h2 className="font-display text-3xl font-bold md:text-4xl">{t("featured.title")}</h2>
+            <p className="mt-2 text-muted-foreground">{t("featured.subtitle")}</p>
           </div>
           <Link
             to="/menu"
@@ -113,7 +114,7 @@ export default function Index() {
             >
               <div className="relative">
                 <img src={item.image} alt={item.name} className="h-56 w-full object-cover transition duration-300 group-hover:scale-105" />
-                <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold tracking-wide text-foreground/90 shadow">Chef's pick</span>
+                <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold tracking-wide text-foreground/90 shadow">{t("featured.chefsPick")}</span>
               </div>
               <div className="p-5">
                 <div className="flex items-center justify-between">
@@ -131,16 +132,16 @@ export default function Index() {
       <section className="bg-secondary/60 py-12">
         <div className="container grid items-center gap-8 md:grid-cols-3">
           <div>
-            <h3 className="font-display text-2xl font-semibold">72‑Hour Dough</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Cold-fermented for depth of flavor and an airy cornicione.</p>
+            <h3 className="font-display text-2xl font-semibold">{t("features.dough.title")}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{t("features.dough.desc")}</p>
           </div>
           <div>
-            <h3 className="font-display text-2xl font-semibold">San Marzano DOP</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Our sauce uses tomatoes grown in volcanic soil near Vesuvius.</p>
+            <h3 className="font-display text-2xl font-semibold">{t("features.sauce.title")}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{t("features.sauce.desc")}</p>
           </div>
           <div>
-            <h3 className="font-display text-2xl font-semibold">900°F Wood Fire</h3>
-            <p className="mt-2 text-sm text-muted-foreground">A blistered crust with leopard spots in 90 seconds flat.</p>
+            <h3 className="font-display text-2xl font-semibold">{t("features.oven.title")}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{t("features.oven.desc")}</p>
           </div>
         </div>
       </section>
@@ -150,14 +151,14 @@ export default function Index() {
         <div className="overflow-hidden rounded-3xl border bg-gradient-to-tr from-primary to-accent p-8 text-primary-foreground shadow-lg md:p-12">
           <div className="grid items-center gap-6 md:grid-cols-2">
             <div>
-              <h3 className="font-display text-3xl font-bold md:text-4xl">Order for pickup tonight</h3>
-              <p className="mt-2 text-sm opacity-90 md:text-base">Skip the line. Your pie will be fired the moment you arrive.</p>
+              <h3 className="font-display text-3xl font-bold md:text-4xl">{t("cta.title")}</h3>
+              <p className="mt-2 text-sm opacity-90 md:text-base">{t("cta.desc")}</p>
               <div className="mt-6">
                 <Link
                   to="/menu"
                   className="inline-flex items-center rounded-full bg-background/15 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur transition hover:bg-background/20"
                 >
-                  Start order
+                  {t("cta.start")}
                 </Link>
               </div>
             </div>
@@ -174,19 +175,19 @@ export default function Index() {
       <section className="container py-16">
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
-            <h3 className="font-display text-3xl font-bold md:text-4xl">Visit us</h3>
+            <h3 className="font-display text-3xl font-bold md:text-4xl">{t("visit.title")}</h3>
             <p className="max-w-prose text-muted-foreground">
-              Join us for lunch or dinner. We keep a portion of our dining room for walk‑ins every day.
+              {t("visit.intro")}
             </p>
             <div className="grid gap-4 rounded-2xl border bg-card p-6">
               <div className="flex items-start gap-3">
                 <Clock className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
-                  <div className="font-semibold">Opening hours</div>
+                  <div className="font-semibold">{t("visit.hours")}</div>
                   <ul className="mt-1 text-sm text-muted-foreground">
-                    <li>Mon–Thu: 11:30a – 10:00p</li>
-                    <li>Fri–Sat: 11:30a – 11:30p</li>
-                    <li>Sun: 11:30a – 9:30p</li>
+                    <li>{t("visit.monThu")}</li>
+                    <li>{t("visit.friSat")}</li>
+                    <li>{t("visit.sun")}</li>
                   </ul>
                 </div>
               </div>
@@ -194,14 +195,14 @@ export default function Index() {
                 <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
                   <div className="font-semibold">21 Via Napoli, San Francisco, CA</div>
-                  <div className="text-sm text-muted-foreground">Street parking available • Walk‑ins welcome</div>
+                  <div className="text-sm text-muted-foreground">{t("visit.addressNote")}</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
                   <div className="font-semibold">(415) 555‑0123</div>
-                  <div className="text-sm text-muted-foreground">Call for large parties and catering</div>
+                  <div className="text-sm text-muted-foreground">{t("visit.phoneNote")}</div>
                 </div>
               </div>
             </div>
