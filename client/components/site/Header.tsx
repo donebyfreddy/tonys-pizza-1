@@ -8,7 +8,7 @@ const navItemsBase = [
   { to: "/", key: "nav.home" },
   { to: "/menu", key: "nav.menu" },
   { to: "/about", key: "nav.about" },
-  { to: "/contact", key: "nav.contact" },
+  { to: "/#visit", key: "nav.contact" },
 ];
 
 export function Header() {
