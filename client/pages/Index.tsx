@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Clock, MapPin, Phone } from "lucide-react";
+import { useEffect } from "react";
 import { useI18n } from "@/i18n";
 
 const featured = [
@@ -29,6 +30,13 @@ const featured = [
 
 export default function Index() {
   const { t } = useI18n();
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#visit") {
+      const el = document.getElementById("visit");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location]);
   return (
     <div className="">
       {/* Hero */}
@@ -210,7 +218,7 @@ export default function Index() {
       </section>
 
       {/* Visit & hours */}
-      <section className="container py-16">
+      <section id="visit" className="container py-16">
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
             <h3 className="font-display text-3xl font-bold md:text-4xl">
