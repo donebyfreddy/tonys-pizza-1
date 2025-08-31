@@ -67,7 +67,11 @@ const dict: Record<Locale, Dict> = {
       addressNote: "Aparcamiento en la calle • Sin necesidad de reserva",
       phoneNote: "Llámanos para grupos grandes y catering",
     },
-    footer: { navigate: "Navegación", hours: "Horario", instagram: "Instagram" },
+    footer: {
+      navigate: "Navegación",
+      hours: "Horario",
+      instagram: "Instagram",
+    },
     pages: {
       menu: {
         title: "Nuestro Menú",
@@ -92,7 +96,10 @@ const dict: Record<Locale, Dict> = {
     lang: { es: "ES", en: "EN" },
   },
   en: {
-    brand: { name: "Tony's Pizza New York", tagline: "Authentic flavor, quality pizza." },
+    brand: {
+      name: "Tony's Pizza New York",
+      tagline: "Authentic flavor, quality pizza.",
+    },
     nav: {
       home: "Home",
       menu: "Menu",
