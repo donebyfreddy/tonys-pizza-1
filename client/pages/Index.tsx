@@ -31,11 +31,17 @@ export default function Index() {
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-0 -z-10">
-          <img
-            src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1900&auto=format&fit=crop"
-            alt="Wood-fired oven with pizza"
-            className="h-[70svh] w-full object-cover"
-          />
+          <video
+            className="h-[70svh] w-full object-cover pointer-events-none"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1900&auto=format&fit=crop"
+          >
+            <source src="https://videos.pexels.com/video-files/4457933/4457933-hd_1920_1080_24fps.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-background/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
         <div className="container flex min-h-[70svh] flex-col justify-end pb-12">
