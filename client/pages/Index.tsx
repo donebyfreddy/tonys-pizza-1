@@ -42,8 +42,14 @@ export default function Index() {
             playsInline
             poster="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=1900&auto=format&fit=crop"
           >
-            <source src="https://videos.pexels.com/video-files/3196001/3196001-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/3196001/3196001-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source
+              src="https://videos.pexels.com/video-files/3196001/3196001-uhd_2560_1440_25fps.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://videos.pexels.com/video-files/3196001/3196001-hd_1920_1080_25fps.mp4"
+              type="video/mp4"
+            />
           </video>
           <div className="absolute inset-0 bg-background/15" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background/90" />
@@ -92,8 +98,12 @@ export default function Index() {
       <section className="container py-16">
         <div className="mb-8 flex items-end justify-between">
           <div>
-            <h2 className="font-display text-3xl font-bold md:text-4xl">{t("featured.title")}</h2>
-            <p className="mt-2 text-muted-foreground">{t("featured.subtitle")}</p>
+            <h2 className="font-display text-3xl font-bold md:text-4xl">
+              {t("featured.title")}
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              {t("featured.subtitle")}
+            </p>
           </div>
           <Link
             to="/menu"
@@ -113,15 +123,25 @@ export default function Index() {
               className="group overflow-hidden rounded-2xl border bg-card shadow-sm"
             >
               <div className="relative">
-                <img src={item.image} alt={item.name} className="h-56 w-full object-cover transition duration-300 group-hover:scale-105" />
-                <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold tracking-wide text-foreground/90 shadow">{t("featured.chefsPick")}</span>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
+                />
+                <span className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-semibold tracking-wide text-foreground/90 shadow">
+                  {t("featured.chefsPick")}
+                </span>
               </div>
               <div className="p-5">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold">{item.name}</h3>
-                  <span className="font-semibold text-primary">{item.price}</span>
+                  <span className="font-semibold text-primary">
+                    {item.price}
+                  </span>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {item.desc}
+                </p>
               </div>
             </motion.article>
           ))}
@@ -132,16 +152,28 @@ export default function Index() {
       <section className="bg-secondary/60 py-12">
         <div className="container grid items-center gap-8 md:grid-cols-3">
           <div>
-            <h3 className="font-display text-2xl font-semibold">{t("features.dough.title")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{t("features.dough.desc")}</p>
+            <h3 className="font-display text-2xl font-semibold">
+              {t("features.dough.title")}
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("features.dough.desc")}
+            </p>
           </div>
           <div>
-            <h3 className="font-display text-2xl font-semibold">{t("features.sauce.title")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{t("features.sauce.desc")}</p>
+            <h3 className="font-display text-2xl font-semibold">
+              {t("features.sauce.title")}
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("features.sauce.desc")}
+            </p>
           </div>
           <div>
-            <h3 className="font-display text-2xl font-semibold">{t("features.oven.title")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{t("features.oven.desc")}</p>
+            <h3 className="font-display text-2xl font-semibold">
+              {t("features.oven.title")}
+            </h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("features.oven.desc")}
+            </p>
           </div>
         </div>
       </section>
@@ -151,8 +183,12 @@ export default function Index() {
         <div className="overflow-hidden rounded-3xl border bg-gradient-to-tr from-primary to-accent p-8 text-primary-foreground shadow-lg md:p-12">
           <div className="grid items-center gap-6 md:grid-cols-2">
             <div>
-              <h3 className="font-display text-3xl font-bold md:text-4xl">{t("cta.title")}</h3>
-              <p className="mt-2 text-sm opacity-90 md:text-base">{t("cta.desc")}</p>
+              <h3 className="font-display text-3xl font-bold md:text-4xl">
+                {t("cta.title")}
+              </h3>
+              <p className="mt-2 text-sm opacity-90 md:text-base">
+                {t("cta.desc")}
+              </p>
               <div className="mt-6">
                 <a
                   href="https://glovoapp.com/es/es/barcelona/tonys-from-new-york-barcelona/"
@@ -177,7 +213,9 @@ export default function Index() {
       <section className="container py-16">
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="space-y-6">
-            <h3 className="font-display text-3xl font-bold md:text-4xl">{t("visit.title")}</h3>
+            <h3 className="font-display text-3xl font-bold md:text-4xl">
+              {t("visit.title")}
+            </h3>
             <p className="max-w-prose text-muted-foreground">
               {t("visit.intro")}
             </p>
@@ -196,15 +234,21 @@ export default function Index() {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
-                  <div className="font-semibold">Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona</div>
-                  <div className="text-sm text-muted-foreground">{t("visit.addressNote")}</div>
+                  <div className="font-semibold">
+                    Av. de Vallvidrera, 77, Sarrià-Sant Gervasi, 08017 Barcelona
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {t("visit.addressNote")}
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-5 w-5 text-primary" />
                 <div>
                   <div className="font-semibold">930 37 05 90</div>
-                  <div className="text-sm text-muted-foreground">{t("visit.phoneNote")}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {t("visit.phoneNote")}
+                  </div>
                 </div>
               </div>
             </div>

@@ -68,19 +68,22 @@ const categories: { title: string; items: MenuItem[] }[] = [
         name: "Wood‑Roasted Olives",
         desc: "Citrus, rosemary, chili.",
         price: "$8",
-        image: "https://images.unsplash.com/photo-1510627498534-cf7e9002facc?q=80&w=1200&auto=format&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1510627498534-cf7e9002facc?q=80&w=1200&auto=format&fit=crop",
       },
       {
         name: "Caesar",
         desc: "Little gem, parm, sourdough croutons.",
         price: "$12",
-        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop",
       },
       {
         name: "Burrata",
         desc: "Tomatoes, basil, Sicilian olive oil.",
         price: "$14",
-        image: "https://images.pexels.com/photos/19808760/pexels-photo-19808760.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        image:
+          "https://images.pexels.com/photos/19808760/pexels-photo-19808760.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
       },
     ],
   },
@@ -91,19 +94,22 @@ const categories: { title: string; items: MenuItem[] }[] = [
         name: "Italian Soda",
         desc: "Blood orange, chinotto, lemon.",
         price: "$6",
-        image: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1200&auto=format&fit=crop",
+        image:
+          "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1200&auto=format&fit=crop",
       },
       {
         name: "House Red/White",
         desc: "By the glass.",
         price: "$10",
-        image: "https://images.pexels.com/photos/10059916/pexels-photo-10059916.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        image:
+          "https://images.pexels.com/photos/10059916/pexels-photo-10059916.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
       },
       {
         name: "Birra Moretti",
         desc: "Lager, 12oz.",
         price: "$7",
-        image: "https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
+        image:
+          "https://images.pexels.com/photos/991970/pexels-photo-991970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop",
       },
     ],
   },
@@ -115,8 +121,12 @@ export default function Menu() {
     <div className="">
       <section className="border-b bg-secondary/60 py-14">
         <div className="container">
-          <h1 className="font-display text-4xl font-extrabold tracking-tight md:text-5xl">{t("pages.menu.title")}</h1>
-          <p className="mt-2 max-w-2xl text-muted-foreground">{t("pages.menu.subtitle")}</p>
+          <h1 className="font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+            {t("pages.menu.title")}
+          </h1>
+          <p className="mt-2 max-w-2xl text-muted-foreground">
+            {t("pages.menu.subtitle")}
+          </p>
         </div>
       </section>
 
@@ -144,15 +154,23 @@ export default function Menu() {
                     className="overflow-hidden rounded-2xl border bg-card shadow-sm"
                   >
                     {item.image && (
-                      <img src={item.image} alt="" className="h-44 w-full object-cover" />
+                      <img
+                        src={item.image}
+                        alt=""
+                        className="h-44 w-full object-cover"
+                      />
                     )}
                     <div className="p-5">
                       <div className="flex items-center justify-between">
                         <h3 className="font-medium">{item.name}</h3>
-                        <span className="font-semibold text-primary">{item.price}</span>
+                        <span className="font-semibold text-primary">
+                          {item.price}
+                        </span>
                       </div>
                       {item.desc && (
-                        <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                        <p className="mt-2 text-sm text-muted-foreground">
+                          {item.desc}
+                        </p>
                       )}
                     </div>
                   </motion.article>

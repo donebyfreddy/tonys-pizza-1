@@ -24,8 +24,12 @@ export function Header() {
             <span className="font-bold">RF</span>
           </div>
           <div className="leading-tight">
-            <div className="font-display text-xl tracking-tight">{t("brand.name")}</div>
-            <div className="text-xs text-muted-foreground -mt-0.5">{t("brand.tagline")}</div>
+            <div className="font-display text-xl tracking-tight">
+              {t("brand.name")}
+            </div>
+            <div className="text-xs text-muted-foreground -mt-0.5">
+              {t("brand.tagline")}
+            </div>
           </div>
         </Link>
 
