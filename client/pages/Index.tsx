@@ -165,7 +165,7 @@ export default function Index() {
             <img
               src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop"
               alt="Pepperoni pizza"
-              className="hidden h-52 w-full rounded-2xl object-cover shadow-md md:block"
+              className="block h-40 w-full rounded-2xl object-cover shadow-md sm:h-48 md:h-52"
             />
           </div>
         </div>
